@@ -31,6 +31,9 @@
         app.use('/api/auth', require('./routes/authRoutes'));
         app.use('/api/events', require('./routes/eventRoutes'));
         app.use('/api/google-calendar', require('./routes/googleCalendarRoutes'));
+app.get('/', (req, res) => {
+  res.send('Welcome to My API');
+});
 
         const PORT = process.env.PORT || 5000;
 
