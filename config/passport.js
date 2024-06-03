@@ -43,7 +43,6 @@ async (req, accessToken, refreshToken, profile, done) => {
         role: user.role
       }
     };
-
     const jwtToken = jwt.sign(payload, jwtSecret, { expiresIn: '1h' });
     user.token = jwtToken;
 
